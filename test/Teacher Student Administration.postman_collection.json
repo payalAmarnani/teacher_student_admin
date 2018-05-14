@@ -1,0 +1,237 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Teacher Student Administration",
+		"_postman_id": "fed75057-6ab6-71b8-450a-318ccb153830",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3003/api/register",
+			"request": {
+				"url": "localhost:3003/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherken@gmail.com\",\r\n  \"students\":\r\n    [\r\n      \"studentjon@example.com\",\r\n      \"studenthon@example.com\"\r\n    ]\r\n}"
+				},
+				"description": "Teacher Ken  registers student jon and hon"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/register",
+			"request": {
+				"url": "localhost:3003/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherken@example.com\",\r\n  \"students\":\r\n    [\r\n      \"commonstudent1@gmail.com\", \r\n      \"commonstudent2@gmail.com\",\r\n      \"student_only_under_teacher_ken@gmail.com\"\r\n    ]\r\n}"
+				},
+				"description": "Register \ncommon student 1 \ncommon student 2\nstudent only under teacher ken\n\nto teacherken@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/register",
+			"request": {
+				"url": "localhost:3003/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherjoe@example.com\",\r\n  \"students\":\r\n    [\r\n      \"commonstudent1@gmail.com\", \r\n      \"commonstudent2@gmail.com\"\r\n    ]\r\n}"
+				},
+				"description": "Register \ncommon student 1\ncommon student 2 \nto teacherjoe@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/commonstudents?teacher=teacherken%40example.com",
+			"request": {
+				"url": {
+					"raw": "localhost:3003/api/commonstudents?teacher=teacherken%40example.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacherken%40example.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all students assigned to teacherken@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/commonstudents?teacher=teacherken%40example.com&teacher=teacherjoe%40example.com",
+			"request": {
+				"url": {
+					"raw": "localhost:3003/api/commonstudents?teacher=teacherken%40example.com&teacher=teacherjoe%40example.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacherken%40example.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "teacher",
+							"value": "teacherjoe%40example.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET common students between teacherken@example.com and teacherjoe@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/register",
+			"request": {
+				"url": "localhost:3003/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherken@gmail.com\",\r\n  \"students\":\r\n    [\r\n      \"studentmary@gmail.com\"\r\n    ]\r\n}"
+				},
+				"description": "Register Student Mary"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/suspend",
+			"request": {
+				"url": "localhost:3003/api/suspend",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student\" : \"studentmary@gmail.com\"\r\n}"
+				},
+				"description": "Suspend student mary"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/register",
+			"request": {
+				"url": "localhost:3003/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherjoe@example.com\",\r\n  \"students\":\r\n    [\r\n      \"studentagnes@example.com\", \r\n      \"studentmiche@example.com\"\r\n    ]\r\n}"
+				},
+				"description": "register agnes and miche teacherjoe@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/retrievefornotifications",
+			"request": {
+				"url": "localhost:3003/api/retrievefornotifications",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\":  \"teacherken@example.com\",\r\n  \"notification\": \"Hello students! @studentagnes@example.com @studentmiche@example.com\"\r\n}"
+				},
+				"description": "students retrieved under teacher ken and those included in notification"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/api/retrievefornotifications",
+			"request": {
+				"url": "localhost:3003/api/retrievefornotifications",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\":  \"teacherken@example.com\",\r\n  \"notification\": \"Hey everybody\"\r\n}"
+				},
+				"description": "retrieve notifications for students under teacher ken"
+			},
+			"response": []
+		}
+	]
+}

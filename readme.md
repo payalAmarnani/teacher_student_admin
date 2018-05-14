@@ -26,7 +26,7 @@ npm test
 
 ## Postman Tests
 
-Postman collection can be imported from the test/TeacherStudentAdministration.postman_collection
+Postman collection can be imported from the test/Teacher Student Administration.postman_collection
 
 ## Contributors
 
