@@ -5,9 +5,9 @@ An API backend that enables teachers to perform administrative functions for the
 
 ## Setup
 
-- Run the db/administration.sql on the database
+- Run the db/administration.sql on the db server to create the administration database and the teacher,student and teacher_student_relation  tables.
 - Configure database settings in the db/db.js file
-- node app.js to set up server and connect to apis
+- Run "node app.js" to set up server and connect to apis
 
 ## Unit Testing
 npm test
